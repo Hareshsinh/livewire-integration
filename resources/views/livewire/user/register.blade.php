@@ -25,11 +25,6 @@
         @if($errors->has('password'))<span class="error">{{ $errors->first('password') }}</span> @endif
         @if($errors->has('password_confirmation'))<span class="error">{{ $errors->first('password_confirmation') }}</span> @endif
     </div>
-{{--    <div class="form-group">--}}
-{{--        <label for="title">Conform Password</label>--}}
-{{--        <input type="password" class="form-control" wire:model.lazy="password_confirmation" placeholder="Enter Password Confirmation" name="password_confirmation">--}}
-{{--        @if($errors->has('password_confirmation'))<span class="error">{{ $errors->first('password_confirmation') }}</span> @endif--}}
-{{--    </div>--}}
     <button wire:click="saveUser" class="btn btn-primary">Save Contact</button>
 
     <div wire:loading wire:target="saveUser">
@@ -40,9 +35,6 @@
         <div class="form-group">
             <button for="title" class="btn btn-primary" wire:click="goToAddPage">List of register</button>
         </div>
-        <div class="form-group">
-            <label for="title"><h1><div wire:poll>{{ now() }}</div></h1></label>
-        </label>
     </div>
 </div>
 
